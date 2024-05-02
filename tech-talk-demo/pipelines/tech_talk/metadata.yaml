@@ -1,0 +1,59 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    url: http://data.gdeltproject.org/events
+  downstream_blocks:
+  - map_field_subset
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: download raw file
+  retry_config: {}
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: download_raw_file
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: map field subset
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - download_raw_file
+  uuid: map_field_subset
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-20 10:39:07.367972+00:00'
+data_integration: null
+description: Demo pipeline for tech talk
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: tech_talk
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- v_1
+type: python
+uuid: tech_talk
+variables_dir: /Users/czarorozco/.mage_data/tech-talk-demo
+widgets: []
